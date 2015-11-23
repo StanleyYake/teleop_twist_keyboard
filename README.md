@@ -5,7 +5,7 @@ To run: `roslaunch teleop_twist_keyboard teleop_twist_keyboard.launch` change th
 
 or change to this set your own topic name as 2nd cmd line parameters.
 
- 
+ ```
  if __name__=="__main__":
 -    	settings = termios.tcgetattr(sys.stdin)
 -	
@@ -18,5 +18,6 @@ or change to this set your own topic name as 2nd cmd line parameters.
 +
 +
 +	pub = rospy.Publisher(topic_name, Twist)
+```
 
 and run `rosrun teleop_twist_keyboard teleop_twist_keyboard.py your_topic_name`
